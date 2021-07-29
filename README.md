@@ -28,3 +28,9 @@ In order to start the movies mfe you will need to go to the movies folder and ru
 - `npm run start`
 
 Once you run this commands you will be able to access either directly the movies mfe using the following url `http://localhost:3000` or to access the shell app using the url provided above.
+
+# Connect to the Movies API
+
+In order to get results from the `themoviedb.org` you will need to get an API key which you should use it into the application. Follow the steps from the website https://developers.themoviedb.org/3/getting-started/introduction in order to get an API key.
+
+Once you have the API key you will need to open the service file from the following location `/src/app/movies/services/movies.services.ts` and put the API key into the `movieApiKey` property.
