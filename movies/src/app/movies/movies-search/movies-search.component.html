@@ -1,0 +1,23 @@
+
+<div id="container">
+
+    <p id="shared-lib-movies">
+        Shared lib version: <span id="version"></span>
+    </p>
+
+    <a [routerLink]="['test-second-route']">Test Second Route</a>
+
+    <p-card header="Search movies" [style]="{'width': '100%', 'margin-bottom': '2em'}">
+        <div>
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" pInputText [(ngModel)]="movie" placeholder="Search" (ngModelChange)="triggerSearch($event)">         
+            </span>
+        </div>
+    </p-card>
+    <div id="movie-list">
+        <app-movie-card *ngFor="let movie of (movies$ | async)" [title]="movie.name">
+            <img [style]="{'width': '100%'}" image src="https://image.tmdb.org/t/p/original/{{movie.image}}" [alt]="movie.name"/>
+        </app-movie-card>
+    </div>
+</div>
